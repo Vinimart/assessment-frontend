@@ -1,3 +1,113 @@
-.container-body {
-    padding: 1em;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Header */
+
+.header-autentication {
+    color: #FFFFFF;
+    background-color: #242424;
+    /* equals .font-1x */
+    font-size: 14px;
+    text-align: right;
+}
+
+.header-autentication a {
+    text-decoration: underline;
+}
+
+.header-autentication div {
+    max-width: 1024px;
+    margin: auto;
+    padding: 3px;
+}
+
+.header-autentication span {
+    padding: 25px;
+}
+
+.header-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1024px;
+    margin: auto;
+    padding: 25px 0;
+}
+
+.header-banner div {
+    padding: 0 15px;
+}
+
+.header-banner img {
+    width: 200px;
+}
+
+.header-banner input {
+    padding: 5px;
+    width: 350px;
+    border: solid 1px #CCCCCC;
+    display: inline-block;
+    position: relative;
+    left: 4px;
+}
+
+.header-banner button {
+    background-color: #E0181E;
+    color: #FFFFFF;
+    padding: 7.5px 20px;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.header-nav {
+    background-color: #E0181E;
+    color: #FFFFFF;
+}
+
+.header-nav div {
+    max-width: 1024px;
+    margin: auto;
+    padding: 15px 0;
+}
+
+.header-nav span {
+    display: inline-block;
+    padding: 0 30px 0 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.header-nav a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Font */
+
+.font-1x {
+    font-size: 14px;
+}
+
+.font-2x {
+    font-size: 16px;
+}
+
+.font-3x {
+    font-size: 18px;
+}
+
+.font-4x {
+    font-size: 20px;
 }

@@ -12,10 +12,19 @@
 		<title>Webjump - Desafio Frontend</title>
 	</head>
 	<body class="container-body">
-		<header>
-			<!-- Cadastro -->
-			<div>
-				<!-- Header Main -->
+		<header class="header-main">
+			<!-- Autenticação -->
+			<div class="header-autentication">
+				<div>
+					<span>
+						<strong><a href="/public/login.html">Acesse sua Conta</a></strong> ou
+						<strong><a href="/public/sign-up.html">Cadastre-se</a></strong>
+					</span>
+				</div>
+			</div>
+
+			<div class="header-banner">
+				<!-- Header Logo -->
 				<div>
 					<img src="/media/ui/logo-webjump.png" alt="Webjump Logo" />
 				</div>
@@ -24,12 +33,20 @@
 				<div>
 					<div>
 						<input type="search" name="" id="" />
-						<span>Buscar</span>
+						<button>Buscar</button>
 					</div>
 				</div>
 			</div>
 
-			<nav></nav>
+			<nav class="header-nav">
+					<div>
+						<span><a href="/">Página Inicial</a></span>
+						<span><a href="/">Camisetas</a></span>
+						<span><a href="/">Calças</a></span>
+						<span><a href="/">Sapatos</a></span>
+						<span><a href="/">Contato</a></span>
+					</div>
+			</nav>
 		</header>
 
 		<main>
