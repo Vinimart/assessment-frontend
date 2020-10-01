@@ -11,7 +11,7 @@
 
 		<title>Webjump - Desafio Frontend</title>
 	</head>
-	<body class="container-body">
+	<body>
 		<header class="header-main">
 			<!-- Autenticação -->
 			<div class="header-autentication">
@@ -31,9 +31,9 @@
 
 				<!-- Search Bar -->
 				<div>
-					<div>
-						<input type="search" name="" id="" />
-						<button>Buscar</button>
+					<form action="/">
+						<input type="search" name="Search" id="idSearch" />
+						<button type="submit">Buscar</button>
 					</div>
 				</div>
 			</div>
@@ -59,23 +59,43 @@
 
 		<main>
 			<!-- Container Principal -->
-			<div>
+			<div class="container-main">
 				<!-- Container Filtro -->
-				<aside>
-					<h4></h4>
+				<aside class="container-filter">
+					<h4>FILTRE POR</h4>
 
 					<!-- Categorias -->
-					<div></div>
+					<div class="filter-category">
+						<h3>CATEGORIAS</h3>
+						<ul>
+							<li><a>Roupas</a></li>
+							<li><a>Sapatos</a></li>
+							<li><a>Acessórios</a></li>
+						</ul>
+					</div>
 
 					<!-- Cores -->
-					<div></div>
+					<div class="filter-colors">
+						<h3>CORES</h3>
+						<div style="background-color: #E0181E;"></div>
+						<div style="background-color: #FF8000;"></div>
+						<div style="background-color: #049C9C;"></div>
+					</div>
 
 					<!-- Tipo -->
-					<div></div>
+					<div class="filter-types">
+						<h3>TIPO</h3>
+						<ul>
+							<li><a>Corrida</a></li>
+							<li><a>Caminhada</a></li>
+							<li><a>Casual</a></li>
+							<li><a>Social</a></li>
+						</ul>
+					</div>
 				</aside>
 
 				<!-- Container Produtos -->
-				<div>
+				<div class="container-products">
 					<!-- Categoria dos produtos -->
 					<div>
 						<h3></h3>
@@ -98,20 +118,12 @@
 							<h2></h2>
 							<span></span>
 							<span></span>
-							<button></button>
+							<div></div>
 						</div>
 					</div>
 
 					<!-- Paginação -->
-					<nav>
-						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>
-					</nav>
+					<div></div>
 				</div>
 			</div>
 		</main>
