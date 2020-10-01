@@ -1,212 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="/media/ui/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+		<link rel="stylesheet" href="/src/css/normalize.css" />
+		<link rel="stylesheet" href="/src/css/main.css" />
+		<script src="/src/js/main.js"></script>
 
-	<link rel="shortcut icon" href="/media/ui/favicon.ico" type="image/x-icon" />
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-	<link rel="stylesheet" href="/src/css/normalize.css" />
-	<link rel="stylesheet" href="/src/css/main.css" />
-	<script src="/src/js/main.js"></script>
+		<title>Webjump - Desafio Frontend</title>
+	</head>
 
-	<title>Webjump - Desafio Frontend</title>
-</head>
-
-<body>
-	<header class="header-main">
-		<!-- Autenticação -->
-		<div class="header-autentication">
-			<div>
-				<span>
-					<strong><a href="/public/login.html">Acesse sua Conta</a></strong> ou
-					<strong><a href="/public/sign-up.html">Cadastre-se</a></strong>
-				</span>
-			</div>
-		</div>
-
-		<div class="header-banner">
-			<!-- Header Logo -->
-			<div>
-				<a href="/"><img src="/media/ui/logo-webjump.png" alt="Webjump Logo" /></a>
+	<body>
+		<header class="header-main">
+			<!-- Autenticação -->
+			<div class="header-autentication">
+				<div>
+					<span>
+						<strong><a href="/public/login.html">Acesse sua Conta</a></strong> ou
+						<strong><a href="/public/sign-up.html">Cadastre-se</a></strong>
+					</span>
+				</div>
 			</div>
 
-			<!-- Search Bar -->
-			<div>
-				<form action="/">
-					<input type="search" name="Search" id="idSearch" />
-					<button type="submit">Buscar</button>
+			<div class="header-banner">
+				<!-- Header Logo -->
+				<div>
+					<a href="/"><img src="/media/ui/logo-webjump.png" alt="Webjump Logo" /></a>
+				</div>
+
+				<!-- Search Bar -->
+				<div>
+					<form action="/">
+						<input type="search" name="Search" id="idSearch" />
+						<button type="submit">Buscar</button>
+					</form>
+				</div>
 			</div>
-		</div>
-		</div>
 
-		<nav class="header-nav">
-			<div>
-				<span><a href="/">Página Inicial</a></span>
-				<span><a href="/">Camisetas</a></span>
-				<span><a href="/">Calças</a></span>
-				<span><a href="/">Sapatos</a></span>
-				<span><a href="/">Contato</a></span>
+			<nav class="header-nav">
+				<div>
+					<span><a href="/">Página Inicial</a></span>
+					<span><a href="/">Camisetas</a></span>
+					<span><a href="/">Calças</a></span>
+					<span><a href="/">Sapatos</a></span>
+					<span><a href="/">Contato</a></span>
+				</div>
+			</nav>
+
+			<!-- Breadcrumb -->
+			<div class="header-breadcrumb">
+				<ul class="breadcrumb">
+					<li><a href="/">Página inicial</a></li>
+					<li>Sapatos</li>
+				</ul>
 			</div>
-		</nav>
+		</header>
 
-		<!-- Breadcrumb -->
-		<div class="header-breadcrumb">
-			<ul class="breadcrumb">
-				<li><a href="/">Página inicial</a></li>
-				<li>Sapatos</li>
-			</ul>
-		</div>
-	</header>
+		<main>
+			<!-- Container Principal -->
+			<div class="container-main">
+				<!-- Container Filtro -->
+				<aside class="container-filter">
+					<div>
+						<h4>FILTRE POR</h4>
 
-	<main>
-		<!-- Container Principal -->
-		<div class="container-main">
-			<!-- Container Filtro -->
-			<aside class="container-filter">
-				<h4>FILTRE POR</h4>
+						<!-- Categorias -->
+						<div class="filter-category">
+							<h3>CATEGORIAS</h3>
+							<ul>
+								<li><a>Roupas</a></li>
+								<li><a>Sapatos</a></li>
+								<li><a>Acessórios</a></li>
+							</ul>
+						</div>
 
-				<!-- Categorias -->
-				<div class="filter-category">
-					<h3>CATEGORIAS</h3>
-					<ul>
-						<li><a>Roupas</a></li>
-						<li><a>Sapatos</a></li>
-						<li><a>Acessórios</a></li>
-					</ul>
-				</div>
+						<!-- Cores -->
+						<div class="filter-colors">
+							<h3>CORES</h3>
+							<div style="background-color: #e0181e"></div>
+							<div style="background-color: #ff8000"></div>
+							<div style="background-color: #049c9c"></div>
+						</div>
 
-				<!-- Cores -->
-				<div class="filter-colors">
-					<h3>CORES</h3>
-					<div style="background-color: #E0181E;"></div>
-					<div style="background-color: #FF8000;"></div>
-					<div style="background-color: #049C9C;"></div>
-				</div>
+						<!-- Tipo -->
+						<div class="filter-types">
+							<h3>TIPO</h3>
+							<ul>
+								<li><a>Corrida</a></li>
+								<li><a>Caminhada</a></li>
+								<li><a>Casual</a></li>
+								<li><a>Social</a></li>
+							</ul>
+						</div>
+					</div>
+				</aside>
 
-				<!-- Tipo -->
-				<div class="filter-types">
-					<h3>TIPO</h3>
-					<ul>
-						<li><a>Corrida</a></li>
-						<li><a>Caminhada</a></li>
-						<li><a>Casual</a></li>
-						<li><a>Social</a></li>
-					</ul>
-				</div>
-			</aside>
-
-			<!-- Container Produtos -->
-			<div class="container-products">
-				<!-- Categoria dos produtos -->
-				<div class="products-title">
-					<h3>Sapatos</h3>
-				</div>
-
-				<hr>
-
-				<!-- Ordenação -->
-				<div class="container-products-order">
-					<!-- Lista ou quadros -->
-					<div class="products-view">
-						<i class="fas fa-th"></i>
-						<i class="fas fa-th-list"></i>
+				<!-- Container Produtos -->
+				<div class="container-products">
+					<!-- Categoria dos produtos -->
+					<div class="products-title">
+						<h3>Sapatos</h3>
 					</div>
 
-					<!-- Menu de ordenação -->
-					<div class="products-order">
-						<label for="idProductsOrder">Ordenar por</label>
-						<select name="ProductsOrder" id="idProductsOrder">
-							<option value="0" selected>Preço</option>
-							<option value="1">Nome</option>
-							<option value="2">Popular</option>
-						</select>
+					<hr />
+
+					<!-- Ordenação -->
+					<div class="container-products-order">
+						<!-- Lista ou quadros -->
+						<div class="products-view">
+							<i class="fas fa-th"></i>
+							<i class="fas fa-th-list"></i>
+						</div>
+
+						<!-- Menu de ordenação -->
+						<div class="products-order">
+							<label for="idProductsOrder">Ordenar por</label>
+							<select name="ProductsOrder" id="idProductsOrder">
+								<option value="0" selected>Preço</option>
+								<option value="1">Nome</option>
+								<option value="2">Popular</option>
+							</select>
+						</div>
 					</div>
+
+					<hr />
+
+					<!-- Produtos -->
+					<div class="container-products-list">
+						<!-- Produto -->
+						<div class="products-item">
+							<div class="products-item-img">
+								<img src="/media/shoes-1.jpg" alt="Shoes 1" />
+							</div>
+
+							<div class="products-item-title">
+								<h2>Tênis Adidas Deluxe Shoe Black</h2>
+							</div>
+
+							<div class="products-item-price">
+								<span class="products-old-price">R$299,90</span>
+								<span class="products-new-price">R$99,90</span>
+							</div>
+
+							<button type="button">Comprar</button>
+						</div>
+
+						<div class="products-item">
+							<div class="products-item-img">
+								<img src="/media/shoes-2.jpg" alt="Shoes 1" />
+							</div>
+
+							<div class="products-item-title">
+								<h2>Tênis Vans</h2>
+							</div>
+
+							<div class="products-item-price">
+								<span class="products-old-price"></span>
+								<span class="products-new-price">R$299,90</span>
+							</div>
+
+							<button type="button">Comprar</button>
+						</div>
+
+						<div class="products-item">
+							<div class="products-item-img">
+								<img src="/media/shoes-3.jpg" alt="Shoes 1" />
+							</div>
+
+							<div class="products-item-title">
+								<h2>Tênis Nike</h2>
+							</div>
+
+							<div class="products-item-price">
+								<span class="products-old-price">R$299,90</span>
+								<span class="products-new-price">R$199,90</span>
+							</div>
+
+							<button type="button">Comprar</button>
+						</div>
+
+						<div class="products-item">
+							<div class="products-item-img">
+								<img src="/media/shoes-4.jpg" alt="Shoes 1" />
+							</div>
+
+							<div class="products-item-title">
+								<h2>Tênis Under</h2>
+							</div>
+
+							<div class="products-item-price">
+								<span class="products-old-price"></span>
+								<span class="products-new-price">R$299,90</span>
+							</div>
+
+							<button type="button">Comprar</button>
+						</div>
+					</div>
+
+					<!-- Paginação -->
+					<div></div>
 				</div>
-				
-				<hr>
-
-				<!-- Produtos -->
-				<div class="container-products-list">
-					<!-- Produto -->
-					<div class="products-item">
-						<div class="products-item-img">
-							<img src="/media/shoes-1.jpg" alt="Shoes 1" />
-						</div>
-
-						<div class="products-item-title">
-							<h2 >Tênis Adidas Deluxe Shoe Black</h2>
-						</div>
-
-						<div class="products-item-price">
-							<span class="products-old-price">R$299,90</span>
-							<span class="products-new-price">R$99,90</span>
-						</div>
-
-						<button>Comprar</button>
-					</div>
-
-					<div class="products-item">
-						<div class="products-item-img">
-							<img src="/media/shoes-2.jpg" alt="Shoes 1" />
-						</div>
-
-						<div class="products-item-title">
-							<h2 >Tênis Vans</h2>
-						</div>
-
-						<div class="products-item-price">
-							<span class="products-old-price"></span>
-							<span class="products-new-price">R$299,90</span>
-						</div>
-
-						<button>Comprar</button>
-					</div>
-
-					<div class="products-item">
-						<div class="products-item-img">
-							<img src="/media/shoes-3.jpg" alt="Shoes 1" />
-						</div>
-
-						<div class="products-item-title">
-							<h2 >Tênis Nike</h2>
-						</div>
-
-						<div class="products-item-price">
-							<span class="products-old-price">R$299,90</span>
-							<span class="products-new-price">R$199,90</span>
-						</div>
-
-						<button>Comprar</button>
-					</div>
-
-					<div class="products-item">
-						<div class="products-item-img">
-							<img src="/media/shoes-4.jpg" alt="Shoes 1" />
-						</div>
-
-						<div class="products-item-title">
-							<h2 >Tênis Under</h2>
-						</div>
-
-						<div class="products-item-price">
-							<span class="products-old-price"></span>
-							<span class="products-new-price">R$299,90</span>
-						</div>
-
-						<button>Comprar</button>
-					</div>
-				</div>
-
-				<!-- Paginação -->
-				<div></div>
 			</div>
-		</div>
-	</main>
+		</main>
 
-	<footer></footer>
-</body>
-
+		<footer></footer>
+	</body>
 </html>

@@ -300,6 +300,8 @@ main {
 
 .container-main {
     display: flex;
+    flex-direction: row;
+    align-items: flex-start;
     padding: 0 20px;
 }
 
@@ -319,6 +321,11 @@ main {
 .container-filter div {
     margin-bottom: 20px;
 }
+
+.container-filter div:last-child {
+    margin-bottom: 0;    
+}
+
 
 .container-filter h4 {
     text-transform: uppercase;
