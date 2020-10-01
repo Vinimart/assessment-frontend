@@ -101,10 +101,11 @@
 			<!-- Container Produtos -->
 			<div class="container-products">
 				<!-- Categoria dos produtos -->
-				<div>
+				<div class="products-title">
 					<h3>Sapatos</h3>
-					<hr>
 				</div>
+
+				<hr>
 
 				<!-- Ordenação -->
 				<div class="container-products-order">
@@ -116,8 +117,8 @@
 
 					<!-- Menu de ordenação -->
 					<div class="products-order">
-						<label for="idProductOrder">Ordenar por</label>
-						<select name="ProductOrder" id="idProductOrder">
+						<label for="idProductsOrder">Ordenar por</label>
+						<select name="ProductsOrder" id="idProductsOrder">
 							<option value="0" selected>Preço</option>
 							<option value="1">Nome</option>
 							<option value="2">Popular</option>
@@ -130,16 +131,71 @@
 				<!-- Produtos -->
 				<div class="container-products-list">
 					<!-- Produto -->
-					<div class="product-item">
-						<img src="/media/shoes-1.jpg" alt="Shoes 1" />
-
-						<h2>Tênis Adidas</h2>
-
-						<div>
-							<span>R$299,90</span>
-							<span>R$99,90</span>
+					<div class="products-item">
+						<div class="products-item-img">
+							<img src="/media/shoes-1.jpg" alt="Shoes 1" />
 						</div>
-						
+
+						<div class="products-item-title">
+							<h2 >Tênis Adidas Deluxe Shoe Black</h2>
+						</div>
+
+						<div class="products-item-price">
+							<span class="products-old-price">R$299,90</span>
+							<span class="products-new-price">R$99,90</span>
+						</div>
+
+						<button>Comprar</button>
+					</div>
+
+					<div class="products-item">
+						<div class="products-item-img">
+							<img src="/media/shoes-2.jpg" alt="Shoes 1" />
+						</div>
+
+						<div class="products-item-title">
+							<h2 >Tênis Vans</h2>
+						</div>
+
+						<div class="products-item-price">
+							<span class="products-old-price"></span>
+							<span class="products-new-price">R$299,90</span>
+						</div>
+
+						<button>Comprar</button>
+					</div>
+
+					<div class="products-item">
+						<div class="products-item-img">
+							<img src="/media/shoes-3.jpg" alt="Shoes 1" />
+						</div>
+
+						<div class="products-item-title">
+							<h2 >Tênis Nike</h2>
+						</div>
+
+						<div class="products-item-price">
+							<span class="products-old-price">R$299,90</span>
+							<span class="products-new-price">R$199,90</span>
+						</div>
+
+						<button>Comprar</button>
+					</div>
+
+					<div class="products-item">
+						<div class="products-item-img">
+							<img src="/media/shoes-4.jpg" alt="Shoes 1" />
+						</div>
+
+						<div class="products-item-title">
+							<h2 >Tênis Under</h2>
+						</div>
+
+						<div class="products-item-price">
+							<span class="products-old-price"></span>
+							<span class="products-new-price">R$299,90</span>
+						</div>
+
 						<button>Comprar</button>
 					</div>
 				</div>
