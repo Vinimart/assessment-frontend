@@ -318,15 +318,6 @@ main {
 
 /* Filter */
 
-.container-filter div {
-    margin-bottom: 20px;
-}
-
-.container-filter div:last-child {
-    margin-bottom: 0;    
-}
-
-
 .container-filter h4 {
     text-transform: uppercase;
     font-size: 22px;
@@ -374,6 +365,11 @@ main {
     height: 20px;
     margin-bottom: 5px;
     cursor: pointer;
+}
+
+.filter-category,
+.filter-colors {
+    margin-bottom: 25px;
 }
 
 
