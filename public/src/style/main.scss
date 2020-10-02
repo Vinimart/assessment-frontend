@@ -981,6 +981,7 @@ main {
     border: solid 1px;
     border-color: $border_color_2;
     margin-bottom: 10px;
+    cursor: pointer;
     img {
         max-width: 100%;
         max-height: 100%;
@@ -988,6 +989,7 @@ main {
 }
 .products-item-title {
     height: 45px;
+    cursor: pointer;
     h2 {
         color: $color_7;
         text-transform: uppercase;
