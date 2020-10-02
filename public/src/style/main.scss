@@ -922,7 +922,7 @@ main {
         cursor: pointer;
         margin-right: 5px;
     }
-    &:first-child {
+    i.active {
         color: $color_6;
     }
 }
@@ -1010,4 +1010,39 @@ main {
     color: $color_7;
     text-decoration: line-through;
     font-weight: 300;
+}
+.pagination-container {
+    max-width: 1200px;
+    margin: auto;
+}
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 50px;
+    i {
+        color: $color_6;
+    }
+    a {
+        color: $color_7;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+    a.active {
+        font-weight: 700;
+        color: $color_4;
+    }
+    a:hover:not(.active) {
+        text-decoration: underline;
+    }
+}
+.container-footer {
+	max-width: 1200px;
+	margin: auto;
+	div {
+		background-color: $background_color_2;
+		height: 150px;
+		margin: 0 20px 30px 20px;
+	}
 }
