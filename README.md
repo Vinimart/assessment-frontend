@@ -1,3 +1,16 @@
+# Documentação Teste de Frontend?
+
+## Como rodar este projeto?
+É bem simples, apenas instale as dependencias com "npm install";
+Após instaladas execute o servidor com "npm start".
+
+## Quais foram as tecnologias adotadas nesse teste?
+* ES6
+* SASS
+* GULP
+* BABEL
+
+
 # Quer ser desenvolvedor frontend na Webjump?
 Criamos este teste para avaliar seus conhecimentos e habilidades frontend (HTML, CSS e JavaScript).
 
