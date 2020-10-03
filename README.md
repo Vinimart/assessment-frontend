@@ -1,8 +1,10 @@
 # Documentação Teste de Frontend
 
 ## Como rodar este projeto?
-É bem simples, apenas instale as dependencias com "npm install";
-Após instaladas execute o servidor com "npm start".
+É bem simples!
+* Apenas instale as dependencias com "npm install";
+* Após instaladas execute o servidor com "npm start";
+* Abra o browser em "http://localhost:8888".
 
 ## Quais foram as tecnologias adotadas nesse teste?
 * ES6
