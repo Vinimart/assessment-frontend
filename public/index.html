@@ -8,13 +8,11 @@
 		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 		<link rel="stylesheet" href="/src/style/css/normalize.css" />
 		<link rel="stylesheet" href="/src/style/css/main.css" />
-		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-		<script src="https://unpkg.com/vuex"></script>
 
 		<title>Webjump - Desafio Frontend</title>
 	</head>
 
-	<body>
+	<body onload="products.fetchCategoriesLis(3)">
 		<header class="header-main">
 			<!-- Autenticação -->
 			<div class="header-autentication">
@@ -50,9 +48,9 @@
 			<nav class="header-nav">
 				<div>
 					<span><a href="/">Página Inicial</a></span>
-					<span><a href="/">Camisetas</a></span>
-					<span><a href="/">Calças</a></span>
-					<span><a href="/">Sapatos</a></span>
+					<span><a onclick="products.fetchCategoriesLis(1)">Camisetas</a></span>
+					<span><a onclick="products.fetchCategoriesLis(2)">Calças</a></span>
+					<span><a onclick="products.fetchCategoriesLis(3)">Sapatos</a></span>
 					<span><a href="/">Contato</a></span>
 				</div>
 			</nav>
@@ -61,7 +59,7 @@
 			<div class="header-breadcrumb">
 				<ul class="breadcrumb">
 					<li><a href="/">Página inicial</a></li>
-					<li>Sapatos</li>
+					<li id="breadTitle">Sapatos</li>
 				</ul>
 			</div>
 		</header>
@@ -109,7 +107,7 @@
 				<div class="container-products">
 					<!-- Categoria dos produtos -->
 					<div class="products-title">
-						<h3>Sapatos</h3>
+						<h3 id="productsTitle">Sapatos</h3>
 					</div>
 
 					<hr />
@@ -161,76 +159,10 @@
 			<div></div>
 		</footer>
 
+        <script src="/src/script/main.js"></script>
+
 		<script>
-			Vue.component("product", {
-				props: {
-					img: String,
-					path: String,
-					name: String,
-					price: String,
-					specialprice: String,
-				},
-
-				template: `<div class="products-item">
-                                <div class="products-item-img"><img v-bind:src="img" v-bind:alt="path" /></div>
-                                <div class="products-item-title"><h2>{{ name }}</h2></div>
-                                <div class="products-item-price"><span class="products-old-price">{{ price }}</span> <span class="products-new-price">{{ specialprice }}</span></div>
-                                <button type="button">Comprar</button>
-			                </div>`,
-			});
-
-			const vueApp = new Vue({
-				el: "#productContainer",
-
-				data() {
-					return (
-						{
-                            items: {},
-                            list,
-						},
-						this.fetchCategoriesList(list)
-					);
-				},
-
-				methods: {
-					async fetchCategoriesList(list) {
-						const response = await fetch(`http://localhost:8888/api/V1/categories/${list}`);
-						const data = await response.json();
-						this.items = data;
-						this.propsToProductsItem();
-					},
-
-					propsToProductsItem() {
-						const items = this.items.items;
-						const mainContainer = document.getElementById("productContainer");
-						for (let i = 0; i < items.length; i++) {
-
-                            let specialPrice = items[i].specialPrice
-                            let price = items[i].price
-
-							if (!specialPrice) {
-                                specialPrice = price.toFixed(2);
-                                specialPrice = "R$" + specialPrice;
-                                price = "";
-                            } else {
-                                specialPrice = "R$" + specialPrice.toFixed(2);
-                                price = "R$" + price;
-                            }
-                            
-							const template = `
-                            <div class="products-item">
-			                    <div class="products-item-img"><img src="${items[i].image}" alt="${items[i].path}" /></div>
-			                    <div class="products-item-title"><h2>${items[i].name}</h2></div>
-			                    <div class="products-item-price"><span class="products-old-price">${price.replace('.', ',')}</span> <span class="products-new-price">${specialPrice.replace('.', ',')}</span></div>
-			                    <button type="button">Comprar</button>
-			                </div>
-                            `;
-
-							mainContainer.insertAdjacentHTML("afterbegin", template);
-						}
-					},
-				},
-			});
+			const products = new Products()
 		</script>
 	</body>
 </html>
