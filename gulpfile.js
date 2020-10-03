@@ -3,6 +3,7 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass");
 const babel = require('gulp-babel');
+const minify = require("gulp-babel-minify");
 sass.compiler = require("node-sass");
 
 gulp.task("sass", function () {
@@ -13,12 +14,22 @@ gulp.task("sass", function () {
 		.pipe(gulp.dest("./public/dist/style"));
 });
  
-gulp.task('default', () =>
+gulp.task('babel', () =>
     gulp.src('D:\\Documents\\Projetos\\assessment-frontend\\public\\src\\script\\*.js')
         .pipe(babel({
-            presets: ['@babel/env']
+            presets: ['@babel/preset-env']
         }))
-        .pipe(gulp.dest('./public/dist/script'))
+        .pipe(gulp.dest('./public/build'))
+);
+
+gulp.task("minify", () =>
+  gulp.src("./public/build/*.js")
+    .pipe(minify({
+      mangle: {
+        keepClassName: true
+      }
+    }))
+    .pipe(gulp.dest("./public/dist/script"))
 );
 
 gulp.task("watch", function () {
