@@ -2,6 +2,8 @@
 
 ## Como rodar este projeto?
 É bem simples!
+
+
 * Apenas instale as dependencias com "npm install";
 * Após instaladas execute o servidor com "npm start";
 * Abra o browser em "http://localhost:8888".
