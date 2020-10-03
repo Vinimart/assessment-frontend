@@ -1,4 +1,4 @@
-# Documentação Teste de Frontend?
+# Documentação Teste de Frontend
 
 ## Como rodar este projeto?
 É bem simples, apenas instale as dependencias com "npm install";
