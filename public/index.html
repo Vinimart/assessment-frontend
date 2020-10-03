@@ -137,7 +137,6 @@
 					<!-- Produtos -->
 					<div id="productContainer" class="container-products-list">
 						<!-- Produto -->
-						<product img="media/shoes-6.jpg" path="tenis-slip-preto" name="Tênis Slip Preto" price="90.0" specialprice="50.9"></product>
 					</div>
 
 					<!-- Paginação -->
@@ -163,58 +162,75 @@
 		</footer>
 
 		<script>
-			// Vue.component("product", {
-			//     props: [imgsource, path, name, price, specialPrice],
-
-			// 	template: `<div class="products-item">
-			// 				<div class="products-item-img"><img src="/{{ imgsource }}" alt="{{ path }}" /></div>
-			// 				<div class="products-item-title"><h2>{{ name }}</h2></div>
-			// 				<div class="products-item-price"><span class="products-old-price">{{ price }}</span> <span class="products-new-price">{{ specialPrice }}</span></div>
-			// 				<button type="button">Comprar</button>
-			//                 </div>`,
-			// });
-
 			Vue.component("product", {
-				props: { img: String, path: String, name: String, price: String, specialprice: String },
+				props: {
+					img: String,
+					path: String,
+					name: String,
+					price: String,
+					specialprice: String,
+				},
 
 				template: `<div class="products-item">
                                 <div class="products-item-img"><img v-bind:src="img" v-bind:alt="path" /></div>
                                 <div class="products-item-title"><h2>{{ name }}</h2></div>
                                 <div class="products-item-price"><span class="products-old-price">{{ price }}</span> <span class="products-new-price">{{ specialprice }}</span></div>
                                 <button type="button">Comprar</button>
-                            </div>`,
+			                </div>`,
 			});
 
 			const vueApp = new Vue({
 				el: "#productContainer",
-				data: {},
+
+				data() {
+					return (
+						{
+                            items: {},
+                            list,
+						},
+						this.fetchCategoriesList(list)
+					);
+				},
+
+				methods: {
+					async fetchCategoriesList(list) {
+						const response = await fetch(`http://localhost:8888/api/V1/categories/${list}`);
+						const data = await response.json();
+						this.items = data;
+						this.propsToProductsItem();
+					},
+
+					propsToProductsItem() {
+						const items = this.items.items;
+						const mainContainer = document.getElementById("productContainer");
+						for (let i = 0; i < items.length; i++) {
+
+                            let specialPrice = items[i].specialPrice
+                            let price = items[i].price
+
+							if (!specialPrice) {
+                                specialPrice = price.toFixed(2);
+                                specialPrice = "R$" + specialPrice;
+                                price = "";
+                            } else {
+                                specialPrice = "R$" + specialPrice.toFixed(2);
+                                price = "R$" + price;
+                            }
+                            
+							const template = `
+                            <div class="products-item">
+			                    <div class="products-item-img"><img src="${items[i].image}" alt="${items[i].path}" /></div>
+			                    <div class="products-item-title"><h2>${items[i].name}</h2></div>
+			                    <div class="products-item-price"><span class="products-old-price">${price.replace('.', ',')}</span> <span class="products-new-price">${specialPrice.replace('.', ',')}</span></div>
+			                    <button type="button">Comprar</button>
+			                </div>
+                            `;
+
+							mainContainer.insertAdjacentHTML("afterbegin", template);
+						}
+					},
+				},
 			});
-
-			// Vue.component("product-item", {
-			// 	data: function () {
-			// 		return {
-			// 			count: 0,
-			// 		};
-			// 	},
-			// 	template: `
-			//     <div class="products-item">
-			//         <div class="products-item-img">
-			//             <img src="/media/shoes-1.jpg" alt="Shoes 1" />
-			//         </div>
-
-			//         <div class="products-item-title">
-			//             <h2>name</h2>
-			//         </div>
-
-			//         <div class="products-item-price">
-			//             <span class="products-old-price">price</span>
-			//             <span class="products-new-price">specialPrice</span>
-			//         </div>
-
-			//         <button type="button">Comprar</button>
-			//     </div>
-			//     `,
-			// });
 		</script>
 	</body>
 </html>
