@@ -799,6 +799,7 @@ hr {
     a {
         &:hover {
             text-decoration: underline;
+            cursor: pointer;
         }
     }
 }
@@ -971,14 +972,14 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin: 10px;
 }
 .products-item {
     width: 185px;
     height: 200px;
     text-align: center;
-    margin: 10px 5px 160px 5px;
+    margin: 10px 10px 160px 10px;
     button {
         width: 100%;
         margin: 15px 0;
@@ -1078,7 +1079,7 @@ main {
 @media (max-width: 825px) {
 	.header-main {
 		.header-nav {
-			display: none;
+            display: none;
 		}
 		.container-search {
 			display: none;

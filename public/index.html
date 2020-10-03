@@ -6,14 +6,13 @@
 
 		<link rel="shortcut icon" href="/media/ui/favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-		<link rel="stylesheet" href="/src/style/css/normalize.css" />
-		<link rel="stylesheet" href="/src/style/css/main.css" />
-		<script src="/src/script/main.js"></script>
+		<link rel="stylesheet" href="/dist/style/normalize.css" />
+		<link rel="stylesheet" href="/dist/style/main.css" />
 
 		<title>Webjump - Desafio Frontend</title>
 	</head>
 
-	<body>
+	<body onload="products.fetchCategoriesLis(3)">
 		<header class="header-main">
 			<!-- Autenticação -->
 			<div class="header-autentication">
@@ -49,9 +48,9 @@
 			<nav class="header-nav">
 				<div>
 					<span><a href="/">Página Inicial</a></span>
-					<span><a href="/">Camisetas</a></span>
-					<span><a href="/">Calças</a></span>
-					<span><a href="/">Sapatos</a></span>
+					<span><a onclick="products.fetchCategoriesLis(1)">Camisetas</a></span>
+					<span><a onclick="products.fetchCategoriesLis(2)">Calças</a></span>
+					<span><a onclick="products.fetchCategoriesLis(3)">Sapatos</a></span>
 					<span><a href="/">Contato</a></span>
 				</div>
 			</nav>
@@ -60,12 +59,12 @@
 			<div class="header-breadcrumb">
 				<ul class="breadcrumb">
 					<li><a href="/">Página inicial</a></li>
-					<li>Sapatos</li>
+					<li id="breadTitle">Sapatos</li>
 				</ul>
 			</div>
 		</header>
 
-		<main>
+		<main id="app">
 			<!-- Container Principal -->
 			<div class="container-main">
 				<!-- Container Filtro -->
@@ -108,7 +107,7 @@
 				<div class="container-products">
 					<!-- Categoria dos produtos -->
 					<div class="products-title">
-						<h3>Sapatos</h3>
+						<h3 id="productsTitle">Sapatos</h3>
 					</div>
 
 					<hr />
@@ -134,24 +133,8 @@
 					<hr />
 
 					<!-- Produtos -->
-					<div class="container-products-list">
+					<div id="productContainer" class="container-products-list">
 						<!-- Produto -->
-						<div class="products-item">
-							<div class="products-item-img">
-								<img src="/media/shoes-1.jpg" alt="Shoes 1" />
-							</div>
-
-							<div class="products-item-title">
-								<h2>name</h2>
-							</div>
-
-							<div class="products-item-price">
-								<span class="products-old-price">price</span>
-								<span class="products-new-price">specialPrice</span>
-							</div>
-
-							<button type="button">Comprar</button>
-						</div>
 					</div>
 
 					<!-- Paginação -->
@@ -175,5 +158,11 @@
 		<footer class="container-footer">
 			<div></div>
 		</footer>
+
+        <script src="/src/script/main.js"></script>
+
+		<script>
+			const products = new Products()
+		</script>
 	</body>
 </html>
